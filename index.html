@@ -63,11 +63,36 @@
     <link rel="stylesheet" href="css/main.css">
 </head>
 <body>
-    <ul>
-        <li>123</li>
-        <li>456</li>
-        <li>789</li>
-    </ul>
-    Hello World!
+    <!--
+        BEM (Block, Element, Modifier): CSS 작명 규칙
+        - 띄어쓰기
+        __ ~의 일부분
+        -- ~의 상태
+    -->
+    <div class="body__container">
+
+        <!-- HEADER -->
+        <header class="section">
+            <div class="inner">
+
+                <div class="menu-group">
+                    <div class="logo">
+                        <a href="#">GitHub</a>
+                    </div>
+                    <div class="main-menu">
+                        <ul>
+                            <li><a href="#">Personal</a></li>
+                            <li><a href="#">Open Source</a></li>
+                            <li><a href="#">Business</a></li>
+                            <li><a href="#">Explore</a></li>
+                        </ul>
+                    </div>
+                </div>
+
+            </div>    
+        </header>
+
+    </div>
 </body>
 </html>
+

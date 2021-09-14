@@ -185,4 +185,3 @@ function initMap() {
 | Large Devices | Desktops | 1024px 이상 |
 | Medium Devices | Tablets | 1024px 이하 |
 | Small Devices | Tablets + Phones | 768px 이하 |
-# GitHub-Responsive
