@@ -1,3 +1,4 @@
+/* COMMON */
 .body__container {
     font-family: 'Roboto', sans-serif;
     font-size: 16px;
@@ -5,9 +6,28 @@
     color: #333;
 }
 
+a {
+    text-decoration: none;
+}
+
+/* FLOAT CLEARFIX */
+.clearfix::after {
+    content: "";
+    clear: both;
+    display: block;
+}
+
+.float--left {
+    float: left;
+}
+
+.float--right {
+    float: right;
+}
+
 /* BTN */
 .btn {
-    height: 60px;
+    height: 34px;
     background: #eee linear-gradient(to bottom, #fcfcfc, #eee);
     border: 1px solid #d5d5d5;
     border-radius: 4px;
@@ -20,6 +40,7 @@
     cursor: pointer;
     box-sizing: border-box;
     position: relative;
+    color: #333;
 }
 
 .btn:hover::before {
@@ -69,3 +90,68 @@
 .input--text::-ms-input-placeholder { color: #cacaca; }
 /* Mozilla */
 .input--text::-moz-input-placeholder { color: #cacaca; }
+
+
+/* HEADER */
+header {
+    border-bottom: 1px solid rgba(0, 0, 0, 0.75);
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.75);
+    /* 브라우저마다 색상을 표현하는 방법이 다를 수 있어, 'white' 보다는 헥사 코드 값을 지정하는 것이 좋다! */
+    /* 반복된 헥사 코드는 3개로 축소 가능 FFFFFF -> FFF */
+    background: #FFF;
+}
+
+header .inner {
+    max-width: 980px;
+    height: 78px;
+    /* 중앙 정렬을 위해서 margin side를 auto로 지정 */
+    /* 이런 테크닉은 주로 width가 지정되어 있는 경우에만 가능! */
+    margin: 0 auto;
+}
+
+header .menu-group {
+    display: flex;
+    height: 100%;
+    align-items: center;
+}
+
+header .logo {
+    margin-right: 10px;
+}
+
+header .logo a {
+    display: block;
+    width: 32px;
+    height: 32px;
+    /*
+        a tag내의 img태그가 아닌, 백그라운드에서 이미지를 삽입한다. 
+    */
+    background: url("../img/logo.svg");
+    /* 
+        대체텍스트 용도로 a tag의 값을 쓰기 위해서, a태그의 값을 밀어낸다.
+        12364 등등과 같이 다른 값을 써도 되겠지만, 디버깅시 의도를 파악하기 위해서 9999같은 것을 사용한다. 
+    */
+    text-indent: -9999px;
+}
+
+header .logo a:hover {
+    background: url("../img/logo_on.svg");
+}
+
+header .main-menu {
+    display: flex;
+}
+
+header .main-menu li a {
+    display: block;
+    padding: 10px;
+    color: #3c4146;
+}
+
+header .main-menu li a:hover {
+    color: #4078c0;
+}
+
+header .sign-group {
+    display: flex;
+}
