@@ -25,6 +25,37 @@ a {
     float: right;
 }
 
+/* SUMMARY */
+.summary {
+}
+
+.summary__title {
+    font-size: 38px;
+    font-weight: 300;
+    line-height: 1.25;
+    margin-bottom: 18px;
+}
+
+.summary__description {
+    font-size: 26px;
+    font-weight: 300;
+    color: #767676;
+}
+
+/* SECTION & INNER */
+.section {
+    position: relative;
+}
+
+.section .inner {
+    max-width: 980px;
+    /* 중앙 정렬을 위해서 margin side를 auto로 지정 */
+    /* 이런 테크닉은 주로 width가 지정되어 있는 경우에만 가능! */
+    margin: 0 auto;
+    box-sizing: border;
+    position: relative;
+}
+
 /* BTN */
 .btn {
     height: 34px;
@@ -59,7 +90,6 @@ a {
     background: #55a532 linear-gradient(#91dd70, #55ae2e);
 }
 
-
 .input--text {
     height: 34px;
     padding: 0 10px;
@@ -71,7 +101,6 @@ a {
     box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.075);
     font-size: 16px;
 }
-
 
 .input--text:focus {
     border-color: #51a7e8;
@@ -102,11 +131,7 @@ header {
 }
 
 header .inner {
-    max-width: 980px;
     height: 78px;
-    /* 중앙 정렬을 위해서 margin side를 auto로 지정 */
-    /* 이런 테크닉은 주로 width가 지정되어 있는 경우에만 가능! */
-    margin: 0 auto;
 }
 
 header .menu-group {
@@ -154,4 +179,85 @@ header .main-menu li a:hover {
 
 header .sign-group {
     display: flex;
+    align-items: center;
+    height: 100%;
+}
+
+header .btn-group {
+    order: 2;
+    display: flex;
+}
+
+header .btn-group .sign-in {
+    margin-right: 4px;
+}
+
+#search-form {
+    order: 1;
+    margin-right: 12px;
+}
+
+#search {
+    width: 160px;
+    font-size: 14px;
+}
+
+#search + [type="submit"] {
+    display: none;
+}
+
+header .sub-menu {
+    display: flex;
+    margin-right: 10px;
+}
+
+header .sub-menu  li a {
+    padding: 8px;
+    display: block;
+    font-size: 13px;
+    color: #3c4146;
+}
+
+header .sub-menu li a:hover {
+    color: #4078c0;
+}
+
+/* VISUAL */
+.section--visual {
+    background-image: url("../img/bg.jpg");
+    background-repeat: no-repeat;
+    background-position: bottom left;
+    background-size: cover;
+}
+
+.section--visual::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    /*
+        bottom: 0; right: 0; 과 동일한 효과
+        width: 100%;
+        height: 100%;
+    */
+    background: rgba(0, 0, 0, 0.3);
+}
+
+.section--visual .inner {
+    padding: 160px 0;
+}
+
+.section--visual .summary__title {
+    color: #FFF;
+    font-size: 54px;
+    text-shadow: 0 1px 1px rgba(0, 0, 0, 0.25),
+                0 1px 25px rgba(0, 0, 0, 0.75);
+}
+
+.section--visual .summary__description {
+    color: #FFF;
+    text-shadow: 0 1px 1px rgba(0, 0, 0, 0.25),
+                 0 1px 25px rgba(0, 0, 0, 0.75);
 }
